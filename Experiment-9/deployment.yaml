@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-exp9
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops-exp9
+  template:
+    metadata:
+      labels:
+        app: devops-exp9
+    spec:
+      containers:
+      - name: devops-exp9
+        image: devops-exp9:v1
+        imagePullPolicy: Never
+        command: ["sh", "-c", "while true; do python hello.py; sleep 30; done"]

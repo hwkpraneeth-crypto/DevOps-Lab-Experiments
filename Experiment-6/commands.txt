@@ -1,0 +1,10 @@
+# Experiment 6: Docker Commands
+
+docker --version
+docker pull ubuntu:22.04
+docker run -dit --name devops-exp6 ubuntu:22.04
+docker ps
+docker exec devops-exp6 echo "Hello from Docker Experiment 6"
+docker stop devops-exp6
+docker start devops-exp6
+docker ps -a
